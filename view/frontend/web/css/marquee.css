@@ -1,0 +1,54 @@
+/**
+ * Copyright © 2026 Modestox (https://github.com/modestox). All rights reserved.
+ * License: MIT
+ */
+html, body {
+    overflow-x: hidden !important;
+    width: 100%;
+}
+.modestox-marquee-wrapper {
+    width: 100vw !important;
+    position: relative;
+    left: 50%;
+    margin-left: -50vw;
+    background: #333;
+    z-index: 999;
+}
+.modestox-marquee-container {
+    width: 100%;
+    padding: 0 10px;
+    overflow: hidden;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    position: relative;
+    height: 40px;
+}
+.marquee-content-scroller {
+    display: inline-block;
+    white-space: nowrap;
+    will-change: transform;
+    animation-name: marquee-full-cycle;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+@keyframes marquee-full-cycle {
+    from {
+        transform: translateX(100%);
+    }
+    to {
+        transform: translateX(-100%);
+    }
+}
+.speed-slow {
+    animation-duration: 35s;
+}
+.speed-medium {
+    animation-duration: 20s;
+}
+.speed-fast {
+    animation-duration: 10s;
+}
+.modestox-marquee-container:hover .marquee-content-scroller {
+    animation-play-state: paused;
+}

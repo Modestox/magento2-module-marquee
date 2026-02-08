@@ -1,0 +1,45 @@
+{
+    "modestox_marquee_content": {
+        "column": {
+            "entity_id": true,
+            "is_active": true,
+            "start_time": true,
+            "end_time": true,
+            "content": true,
+            "bg_color": true,
+            "text_color": true,
+            "speed": true,
+            "store_id": true
+        },
+        "index": {
+            "MODESTOX_MARQUEE_CONTENT_STORE_ID_IS_ACTIVE_START_TIME_END_TIME": true
+        },
+        "constraint": {
+            "PRIMARY": true
+        }
+    },
+    "modestox_marquee": {
+        "column": {
+            "entity_id": true,
+            "name": true,
+            "content": true,
+            "is_active": true,
+            "start_time": true,
+            "end_time": true,
+            "bg_color": true,
+            "text_color": true,
+            "speed": true,
+            "display_mode": true,
+            "store_id": true,
+            "height": true,
+            "sort_order": true
+        },
+        "index": {
+            "MODESTOX_MARQUEE_IS_ACTIVE_START_TIME_END_TIME": true,
+            "MODESTOX_MARQUEE_STORE_ID": true
+        },
+        "constraint": {
+            "PRIMARY": true
+        }
+    }
+}

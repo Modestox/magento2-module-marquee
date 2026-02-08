@@ -1,0 +1,7 @@
+/vendor
+/var
+/generated
+/pub/static
+.idea
+.DS_Store
+*.log

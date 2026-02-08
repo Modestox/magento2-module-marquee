@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © 2026 Modestox (https://github.com/modestox). All rights reserved.
+ * License: MIT
+ */
+ -->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:App/etc/routes.xsd">
+    <router id="admin">
+        <route id="modestox_marquee" frontName="modestox_marquee">
+            <module name="Modestox_Marquee"/>
+        </route>
+    </router>
+</config>

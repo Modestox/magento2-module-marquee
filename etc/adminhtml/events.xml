@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © 2026 Modestox (https://github.com/modestox). All rights reserved.
+ * License: MIT
+ */
+ -->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:Event/etc/events.xsd">
+    <event name="modestox_marquee_save_after">
+        <observer name="modestox_marquee_clean_cache" instance="Modestox\Marquee\Observer\CleanMarqueeCache" />
+    </event>
+    <event name="modestox_marquee_delete_after">
+        <observer name="modestox_marquee_clean_cache_delete" instance="Modestox\Marquee\Observer\CleanMarqueeCache" />
+    </event>
+</config>

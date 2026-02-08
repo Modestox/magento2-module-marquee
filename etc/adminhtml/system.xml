@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © 2026 Modestox (https://github.com/modestox). All rights reserved.
+ * License: MIT
+ */
+ -->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system.xsd">
+    <system>
+        <section id="modestox_marquee" translate="label" type="text" sortOrder="20" showInDefault="1" showInWebsite="1" showInStore="1">
+            <label>Marquee Configuration</label>
+            <tab>modestox</tab>
+            <resource>Modestox_Marquee::config</resource>
+            <group id="general" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>Main Settings</label>
+                <field id="active" translate="label" type="select" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Enable Marquee</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+                <field id="text" translate="label" type="textarea" sortOrder="20" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Marquee Message</label>
+                </field>
+                <field id="start_date" translate="label" type="date" sortOrder="30" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Start Date</label>
+                    <comment>Format: M/d/Y</comment>
+                </field>
+                <field id="end_date" translate="label" type="date" sortOrder="40" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>End Date</label>
+                    <comment>Format: M/d/Y</comment>
+                </field>
+                <field id="bg_color" translate="label" type="text" sortOrder="50" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Background Color</label>
+                    <comment>Hex code: e.g. #ff0000</comment>
+                </field>
+            </group>
+        </section>
+    </system>
+</config>

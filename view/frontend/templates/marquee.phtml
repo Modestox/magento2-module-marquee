@@ -1,0 +1,35 @@
+<?php
+/**
+ * Copyright © 2026 Modestox (https://github.com/modestox). All rights reserved.
+ * License: MIT
+ */
+
+/**
+ * @var \Modestox\Marquee\Block\Marquee $block
+ * @var \Magento\Framework\Escaper $escaper
+ */
+$marquees = $block->getMarquees();
+if (!$marquees || $marquees->getSize() === 0) {
+    return;
+}
+?>
+<div class="modestox-marquee-wrapper">
+    <?php foreach ($marquees as $marquee): ?>
+        <?php
+        $height = $escaper->escapeHtmlAttr($marquee->getHeight() ?: '40px');
+        $style = sprintf(
+            'background-color: %s; color: %s; height: %s; line-height: %s;',
+            $escaper->escapeHtmlAttr($marquee->getBgColor()),
+            $escaper->escapeHtmlAttr($marquee->getTextColor()),
+            $height,
+            $height,
+        );
+        ?>
+        <div class="modestox-marquee-container" style="<?= /* @noEscape */
+        $style ?>">
+            <div class="marquee-content-scroller speed-<?= $escaper->escapeHtmlAttr($marquee->getSpeed() ?: 'medium') ?>">
+                <span class="marquee-text"><?= $escaper->escapeHtml($marquee->getContent()) ?></span>
+            </div>
+        </div>
+    <?php endforeach; ?>
+</div>

@@ -1,0 +1,26 @@
+{
+    "name": "modestox/module-marquee",
+    "description": "Marquee text functionality for Magento 2 storefront",
+    "type": "magento2-module",
+    "license": "MIT",
+    "require": {
+        "php": ">=8.3.0",
+        "magento/framework": "*"
+    },
+    "authors": [
+        {
+            "name": "Modestox",
+            "email": "ubuntu.ksm@gmail.com",
+            "homepage": "https://github.com/modestox",
+            "role": "Developer"
+        }
+    ],
+    "autoload": {
+        "files": [
+            "registration.php"
+        ],
+        "psr-4": {
+            "Modestox\\Marquee\\": ""
+        }
+    }
+}

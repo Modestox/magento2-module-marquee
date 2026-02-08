@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © 2026 Modestox (https://github.com/modestox). All rights reserved.
+ * License: MIT
+ */
+ -->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+    <menu>
+        <add id="Modestox_Core::root" title="Modestox" module="Modestox_Marquee" sortOrder="50" parent="Magento_Backend::content" resource="Modestox_Marquee::root"/>
+        <add id="Modestox_Marquee::list" title="Marquees" module="Modestox_Marquee" sortOrder="10" parent="Modestox_Core::root" action="modestox_marquee/index/index" resource="Modestox_Marquee::config"/>
+    </menu>
+</config>

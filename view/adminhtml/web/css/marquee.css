@@ -1,0 +1,32 @@
+.modestox-marquee-container {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    z-index: 100;
+}
+
+.marquee-wrapper {
+    display: flex;
+    white-space: nowrap;
+    animation: marquee-scroll linear infinite;
+    padding: 12px 0;
+}
+
+.marquee-text {
+    padding-left: 100%;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 14px;
+}
+
+.speed-slow { animation-duration: 40s; }
+.speed-medium { animation-duration: 25s; }
+.speed-fast { animation-duration: 12s; }
+
+@keyframes marquee-scroll {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-100%); }
+}
+
+.sticky_top { position: fixed; top: 0; left: 0; }
+.sticky_bottom { position: fixed; bottom: 0; left: 0; }
